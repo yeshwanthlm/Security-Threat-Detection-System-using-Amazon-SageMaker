@@ -1,4 +1,4 @@
-### Create an IAM Role for SageMaker
+### 1. Create an IAM Role for SageMaker
 
 Go to the IAM Console: 
 1. On the left sidebar, click Roles → Create role
@@ -16,4 +16,12 @@ Go to the IAM Console:
 
 Note: For some reason, AWS doesn't allow attaching AmazonS3FullAccess during the initial creation for SageMaker roles. You'll need to add it manually afterward.
 
+### 2. Public Dataset: 
+You need real-world data for threat detection. We'll use a public dataset from UNSW-NB15, which contains normal and malicious network activities.
+
+Dataset: UNSW-NB15
+For simplicity, we’ll use a cleaned CSV version of the dataset:
+* Download: [UNSW_NB15_training-set.csv](https://drive.google.com/file/d/1Htj29YYCVHtcXFuhHy1YeFnObEv7Q3Ma/view?usp=sharing)
+* Upload to S3: Go to Amazon S3 → Click Create Bucket (name it something like security-ml-data-twy)
+* Note: S3 bucket names must be globally unique. Use a variation like security-ml-data-yourname.
 
